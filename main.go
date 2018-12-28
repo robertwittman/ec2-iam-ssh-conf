@@ -32,7 +32,7 @@ func init() {
 	rootCmd.Flags().StringVarP(&region, "region", "", os.Getenv("AWS_DEFAULT_REGION"), "")
 }
 
-func Execute() {
+func main() {
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
